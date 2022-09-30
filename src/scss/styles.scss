@@ -1,0 +1,167 @@
+@import "fonts.scss";
+@import "mixin.scss";
+@import "reset.scss";
+
+.burger {
+   position: relative;
+   width: 24px;
+   height: 19px;
+   cursor: pointer;
+
+   @include mq(lg) {}
+
+   @include mq(sm) {}
+
+   &::before,
+   &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #2E1B0E;
+      ;
+   }
+
+   &::before {
+      top: 0;
+      left: 0;
+   }
+
+   &::after {
+      bottom: 0;
+      left: 0;
+   }
+
+   &__line-center {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #2E1B0E;
+      top: 45%;
+      left: 0;
+   }
+
+   &--js-active::before {
+      transform: rotate(-315deg);
+      top: 48%;
+      transition: all 0.2s linear;
+   }
+
+   &--js-active::after {
+      transform: rotate(315deg);
+      bottom: 45%;
+      transition: all 0.2s linear;
+
+      @include mq (sm) {
+         bottom: 42%;
+      }
+   }
+
+   &--js-active &__line-center {
+      transform: scale(0);
+   }
+}
+
+.wrapper-content {
+   width: 100%;
+   min-height: 100vw;
+}
+
+.header {
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   background-color: #fff;
+   padding: 17.5px 0px;
+
+   &__inner {
+      max-width: 1224px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+
+
+   }
+
+   &__address {
+      padding: 0px 18.5px 0px 26.5px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+   }
+
+   &__address-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: #928F87;
+      margin: 0px 72px 0px 10px;
+   }
+
+   &__menu {
+      display: flex;
+      align-items: center;
+      margin: 0px 32px 0px 67px;
+   }
+
+   &__list-item-link {
+      display: flex;
+      align-items: center;
+   }
+
+   &__basket {
+      background: #FD6342;
+      border-radius: 24px;
+      padding: 12px 18px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+   }
+
+   &__basket-name {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: #FFFFFF;
+      margin-left: 13px;
+   }
+}
+
+
+.logo-link {
+   margin: 0px 40px 0px 28px;
+}
+
+.logo {}
+
+.list {
+   display: flex;
+
+   &__item {
+      list-style: none;
+
+      &:not(:last-child) {
+         margin-right: 37px;
+      }
+
+   }
+
+   &__item-link {
+      text-decoration: none;
+   }
+
+   &__item-name {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #2E1B0E;
+      margin-left: 10px;
+
+   }
+}

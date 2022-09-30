@@ -1,0 +1,179 @@
+/* manrope-regular - latin_cyrillic */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/manrope-v13-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/manrope-v13-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/manrope-v13-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/manrope-v13-latin_cyrillic-regular.woff") format("woff"), url("../fonts/manrope-v13-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/manrope-v13-latin_cyrillic-regular.svg#Manrope") format("svg");
+  /* Legacy iOS */
+}
+/* manrope-500 - latin_cyrillic */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/manrope-v13-latin_cyrillic-500.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/manrope-v13-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/manrope-v13-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/manrope-v13-latin_cyrillic-500.woff") format("woff"), url("../fonts/manrope-v13-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/manrope-v13-latin_cyrillic-500.svg#Manrope") format("svg");
+  /* Legacy iOS */
+}
+/* manrope-600 - latin_cyrillic */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/manrope-v13-latin_cyrillic-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/manrope-v13-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/manrope-v13-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/manrope-v13-latin_cyrillic-600.woff") format("woff"), url("../fonts/manrope-v13-latin_cyrillic-600.ttf") format("truetype"), url("../fonts/manrope-v13-latin_cyrillic-600.svg#Manrope") format("svg");
+  /* Legacy iOS */
+}
+/* manrope-700 - latin_cyrillic */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/manrope-v13-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/manrope-v13-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/manrope-v13-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/manrope-v13-latin_cyrillic-700.woff") format("woff"), url("../fonts/manrope-v13-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/manrope-v13-latin_cyrillic-700.svg#Manrope") format("svg");
+  /* Legacy iOS */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.burger {
+  position: relative;
+  width: 24px;
+  height: 19px;
+  cursor: pointer;
+}
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #2E1B0E;
+}
+.burger::before {
+  top: 0;
+  left: 0;
+}
+.burger::after {
+  bottom: 0;
+  left: 0;
+}
+.burger__line-center {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #2E1B0E;
+  top: 45%;
+  left: 0;
+}
+.burger--js-active::before {
+  transform: rotate(-315deg);
+  top: 48%;
+  transition: all 0.2s linear;
+}
+.burger--js-active::after {
+  transform: rotate(315deg);
+  bottom: 45%;
+  transition: all 0.2s linear;
+}
+@media only screen and (max-width: 366px) {
+  .burger--js-active::after {
+    bottom: 42%;
+  }
+}
+.burger--js-active .burger__line-center {
+  transform: scale(0);
+}
+
+.wrapper-content {
+  width: 100%;
+  min-height: 100vw;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  background-color: #fff;
+  padding: 17.5px 0px;
+}
+.header__inner {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.header__address {
+  padding: 0px 18.5px 0px 26.5px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header__address-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #928F87;
+  margin: 0px 72px 0px 10px;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  margin: 0px 32px 0px 67px;
+}
+.header__list-item-link {
+  display: flex;
+  align-items: center;
+}
+.header__basket {
+  background: #FD6342;
+  border-radius: 24px;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header__basket-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-left: 13px;
+}
+
+.logo-link {
+  margin: 0px 40px 0px 28px;
+}
+
+.list {
+  display: flex;
+}
+.list__item {
+  list-style: none;
+}
+.list__item:not(:last-child) {
+  margin-right: 37px;
+}
+.list__item-link {
+  text-decoration: none;
+}
+.list__item-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
+  margin-left: 10px;
+}/*# sourceMappingURL=styles.css.map */
