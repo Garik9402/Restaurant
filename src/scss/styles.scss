@@ -328,7 +328,13 @@
       }
    }
 
-   &__title {
+   &__menu-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__menu-title {
       font-family: 'Manrope', sans-serif;
       font-weight: 600;
       font-size: 20px;
@@ -384,11 +390,29 @@
 }
 
 .spoiler {
+   cursor: pointer;
 
    &__list {
       height: 0;
       min-height: 0;
       overflow: hidden;
       opacity: 0;
+
+   }
+
+   &--js-open-list &__list {
+      height: auto;
+      min-height: 20px;
+      overflow: visible;
+      opacity: 1;
+   }
+
+   &__arrow {
+      cursor: pointer;
+
+   }
+
+   &--js-open-list &__arrow {
+      transform: rotate(180deg);
    }
 }

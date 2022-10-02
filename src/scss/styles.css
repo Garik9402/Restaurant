@@ -320,7 +320,12 @@
   background: #F5F5F6;
   border-radius: 12px;
 }
-.burger-menu__title {
+.burger-menu__menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.burger-menu__menu-title {
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -348,9 +353,24 @@
   text-decoration: none;
 }
 
+.spoiler {
+  cursor: pointer;
+}
 .spoiler__list {
   height: 0;
   min-height: 0;
   overflow: hidden;
   opacity: 0;
+}
+.spoiler--js-open-list .spoiler__list {
+  height: auto;
+  min-height: 20px;
+  overflow: visible;
+  opacity: 1;
+}
+.spoiler__arrow {
+  cursor: pointer;
+}
+.spoiler--js-open-list .spoiler__arrow {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=styles.css.map */
