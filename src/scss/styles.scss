@@ -626,7 +626,7 @@
    }
 
 
-   @include mq (lg) {
+   @include mq (md) {
       max-width: 140px;
       width: 100%;
       min-height: 140px;
