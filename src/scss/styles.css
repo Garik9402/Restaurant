@@ -84,7 +84,7 @@
   bottom: 45%;
   transition: all 0.2s linear;
 }
-@media only screen and (max-width: 318px) {
+@media only screen and (max-width: 373px) {
   .burger--js-active::after {
     bottom: 42%;
   }
@@ -160,6 +160,7 @@
 .header__address {
   display: flex;
   align-items: center;
+  padding: 0px 18.5px 0px 26.5px;
 }
 @media only screen and (max-width: 1278px) {
   .header__address {
@@ -240,7 +241,6 @@
 }
 
 .address {
-  padding: 0px 18.5px 0px 26.5px;
   height: 45px;
   text-decoration: none;
 }
@@ -430,6 +430,24 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+.shares__address-w {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.shares__address {
+  display: none;
+  padding: 10px 16px 10px 12px;
+}
+@media only screen and (max-width: 373px) {
+  .shares__address {
+    display: flex;
+    align-items: center;
+  }
+}
+.shares__address-text {
+  margin-right: 96px;
+}
 .shares__menu {
   margin-bottom: 16px;
 }
@@ -560,9 +578,9 @@
 }
 @media only screen and (max-width: 574px) {
   .card {
-    max-width: 140px;
+    max-width: calc(96px + 82 * (100vw - 375px) / 201);
     width: 100%;
-    min-height: 140px;
+    height: calc(122px + 108 * (100vw - 375px) / 201);
   }
 }
 .card__easter-cake {
@@ -592,7 +610,7 @@
 }
 @media only screen and (max-width: 766px) {
   .card__title {
-    font-size: 18px;
+    font-size: calc(12px + 6 * (100vw - 375px) / 201);
   }
 }
 .card__img {
@@ -603,6 +621,13 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media only screen and (max-width: 373px) {
+  .card__img {
+    max-width: 82px;
+    width: 100%;
+    max-height: 111px;
+  }
 }
 .card__img-cake {
   width: 100%;

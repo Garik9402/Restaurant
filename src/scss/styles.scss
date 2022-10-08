@@ -133,6 +133,7 @@
    &__address {
       display: flex;
       align-items: center;
+      padding: 0px 18.5px 0px 26.5px;
 
       @include mq(xxl) {
          padding: 0px 20.5px 0px 15.5px;
@@ -222,7 +223,7 @@
 }
 
 .address {
-   padding: 0px 18.5px 0px 26.5px;
+
    height: 45px;
 
    text-decoration: none;
@@ -447,10 +448,7 @@
 
       }
 
-
-
    }
-
 
 }
 
@@ -465,7 +463,26 @@
       margin: 0 auto;
    }
 
+   &__address-w {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+   }
 
+   &__address {
+      display: none;
+      padding: 10px 16px 10px 12px;
+
+
+      @include mq (sm) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__address-text {
+      margin-right: 96px;
+   }
 
    &__menu {
       margin-bottom: 16px;
@@ -627,9 +644,9 @@
 
 
    @include mq (md) {
-      max-width: 140px;
+      max-width: calc(96px + (178 - 96) *((100vw - 375px) /(576 - 375)));
       width: 100%;
-      min-height: 140px;
+      height: calc(122px + (230 - 122) *((100vw - 375px) /(576 - 375)));
    }
 
    &__easter-cake {
@@ -665,8 +682,9 @@
       color: #FFFFFF;
 
       @include mq(lg) {
-         font-size: 18px;
+         font-size: calc(12px + (18 - 12) *((100vw - 375px) /(576 - 375)));
       }
+
 
    }
 
@@ -678,6 +696,12 @@
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @include mq (sm) {
+         max-width: 82px;
+         width: 100%;
+         max-height: 111px;
+      }
    }
 
    &__img-cake {
