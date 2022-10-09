@@ -510,16 +510,16 @@
       color: #928F87;
 
       @include mq(xl) {
-         font-size: 25px;
+         font-size: calc(18px + (32 - 18) *((100vw - 568px) /(1024 - 568)));
       }
 
-      @include mq(lg) {
-         font-size: 20px;
-      }
+      // @include mq(lg) {
+      //    font-size: 20px;
+      // }
 
-      @include mq(md) {
-         font-size: 18px;
-      }
+      // @include mq(md) {
+      //    font-size: 16px;
+      // }
 
       &:hover {
          color: #FD6342;
@@ -571,16 +571,17 @@
             opacity: 0;
          }
 
-         & {
-            @include mq(xl) {
-               width: 25px;
-               height: 25px;
-               top: 52%;
-            }
-
-            @include mq(md) {}
+         @include mq(lg) {
+            max-width: 25px;
+            max-height: 25px;
+            top: 52%;
+            border-radius: 24px;
          }
 
+         @include mq(md) {
+            // max-width: 18px;
+            // max-height: 18px;
+         }
 
       }
 
@@ -602,7 +603,10 @@
             }
          }
 
-         @include mq(sm) {}
+         @include mq(lg) {
+            background-position: 40% 45%;
+
+         }
       }
 
       /* Стрелка вправо */
@@ -620,6 +624,11 @@
             }
 
             @include mq(md) {}
+         }
+
+         @include mq(lg) {
+            background-position: 45% 45%;
+
          }
       }
 
@@ -647,6 +656,18 @@
       max-width: calc(96px + (178 - 96) *((100vw - 375px) /(576 - 375)));
       width: 100%;
       height: calc(122px + (230 - 122) *((100vw - 375px) /(576 - 375)));
+      border-radius: 16px;
+      padding: 8px 4px 8px 8px;
+
+
+   }
+
+   @include mq (sm) {
+      max-width: calc(96px + (96 - 96) *((100vw - 375px) /(576 - 375)));
+      width: 100%;
+      height: calc(122px + (122 - 122) *((100vw - 375px) /(576 - 375)));
+      border-radius: 16px;
+
    }
 
    &__easter-cake {
@@ -681,8 +702,8 @@
       line-height: 120%;
       color: #FFFFFF;
 
-      @include mq(lg) {
-         font-size: calc(12px + (18 - 12) *((100vw - 375px) /(576 - 375)));
+      @include mq(md) {
+         font-size: calc(12px + (18 - 12) *((100vw - 320px) /(576 - 320)));
       }
 
 
@@ -697,15 +718,138 @@
       bottom: 0;
       right: 0;
 
-      @include mq (sm) {
-         max-width: 82px;
+      @include mq (md) {
+         max-width: calc(75px + (140 - 75) *((100vw - 320px) /(576 - 320)));
          width: 100%;
          max-height: 111px;
+         border-radius: 16px;
       }
+
+      @include mq (sm) {}
    }
 
    &__img-cake {
       width: 100%;
    }
 
+}
+
+.products {
+   width: 100%;
+
+   &__inner {
+      max-width: 1224px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+   }
+
+   &__title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      color: #2E1B0E;
+      margin-bottom: 24px;
+   }
+
+   &__menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__nav-list {
+      display: flex;
+      max-width: 1120px;
+      width: 100%;
+   }
+
+   &__list-item {
+      padding: 10px 20px;
+      background: #FBFBFB;
+      border-radius: 24px;
+
+      &:not(:last-child) {
+         margin-right: 12px;
+      }
+   }
+
+   &__list-item-link {
+      display: flex;
+      align-items: center;
+
+   }
+
+   &__list-item-img {}
+
+   &__list-item-name {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #2E1B0E;
+      margin-left: 8px;
+   }
+
+   &__dropdown-item {
+      width: 96px;
+      height: 44px;
+      padding: 10px 20px;
+      gap: 8px;
+      background: #FBFBFB;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #2E1B0E;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+   }
+
+
+   &__droppdown-item-menu {
+      position: absolute;
+      width: 214px;
+      width: 100%;
+      height: 0;
+      min-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      top: 10px;
+      left: -130px;
+   }
+
+   &__droppdown-nav-list-menu {
+      width: 100%;
+      width: 214px;
+   }
+
+   &__droppdown-list-item {
+      max-width: 214px;
+      width: 100%;
+      margin-bottom: 6px;
+      padding: 10px;
+
+      &:hover {
+         background-color: #928F87;
+         transition: all 0.3s ease;
+      }
+
+   }
+
+   &__droppdown-list-item-link {
+      display: inline-block;
+      width: 100%;
+      display: flex;
+   }
+
+   &__list-item-img {}
+
+   &__list-item-name {}
 }
