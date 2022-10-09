@@ -319,8 +319,8 @@
          <section class="products">
             <div class="products__inner">
                <p class="products__title">Каталог кулинарии</p>
-               <div class="products__menu">
-                  <nav class="nav">
+               <div class="products__checkbox">
+                  <nav class="nav products__nav">
                      <ul class="nav__list products__nav-list">
                         <li class="nav__list-item  products__list-item">
                            <a href="#" class="nav__item-link products__list-item-link">
@@ -377,25 +377,25 @@
                      <div class="products__droppdown-item-menu">
                         <nav class="nav">
                            <ul class="nav__list products__droppdown-nav-list-menu">
-                              <li class="nav__list-item  products__droppdown-list-item">
+                              <li class="nav__list-item  products__droppdown-list-item salads">
                                  <a href="#" class="nav__item-link products__droppdown-list-item-link">
                                     <img src="images/products_menu-img3.png" alt="img3" class="products__list-item-img">
                                     <span class="nav__list-item-name products__list-item-name">Салаты</span>
                                  </a>
                               </li>
-                              <li class="nav__list-item  products__droppdown-list-item">
+                              <li class="nav__list-item  products__droppdown-list-item first-meal">
                                  <a href="#" class="nav__item-link products__droppdown-list-item-link">
                                     <img src="images/products_menu-img4.png" alt="img3" class="products__list-item-img">
                                     <span class="nav__list-item-name products__list-item-name">Первые блюда</span>
                                  </a>
                               </li>
-                              <li class="nav__list-item products__droppdown-list-item">
+                              <li class="nav__list-item products__droppdown-list-item side-dishes">
                                  <a href="#" class="nav__item-link products__droppdown-list-item-link">
                                     <img src="images/products_menu-img5.png" alt="img3" class="products__list-item-img">
                                     <span class="nav__list-item-name products__list-item-name">Гарниры</span>
                                  </a>
                               </li>
-                              <li class="nav__list-item products__droppdown-list-item">
+                              <li class="nav__list-item products__droppdown-list-item main-courses">
                                  <a href="#" class="nav__item-link products__droppdown-list-item-link">
                                     <img src="images/products_menu-img6.png" alt="img3" class="products__list-item-img">
                                     <span class="nav__list-item-name products__list-item-name">Вторые блюда</span>
@@ -403,6 +403,682 @@
                               </li>
                            </ul>
                         </nav>
+                     </div>
+                  </div>
+               </div>
+               <div class="products__menu">
+                  <div class="products__popular-title">Популярное</div>
+                  <div id="popular" class="products__popular">
+                     <div class="products__list">
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img1.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-grey">
+                                 <p class="product__label-name">Сезонное</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Кускус с вялеными томатами</p>
+                              <p class="product__text">Кускус, вяленые томаты, чеснок, петрушка, соль, специи,
+                                 растительное
+                                 масло.</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">135 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img2.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-grey">
+                                 <p class="product__label-name">Сезонное</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Капуста жаренная с грибами</p>
+                              <p class="product__text">Капуста белокочанная, шампиньоны, кинза, чеснок, соль, специи,
+                                 растительное масло. </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">140 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img3.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-orange">
+                                 <p class="product__label-name">-20%</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Печеные овощи с соусом песто</p>
+                              <p class="product__text">Кабачок, баклажан, помидор, лук репчатый, чеснок, растительное
+                                 масло, соус песто </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">250 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img4.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-orange">
+                                 <p class="product__label-name">-35%</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Шампиньоны маринованные</p>
+                              <p class="product__text">Шампиньоны ,лук репчатый, душистое масло, зелень, чеснок</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">238 ₽</p>
+                                 <p class="product__gram">238г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="products__list">
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img5.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-grey">
+                                 <p class="product__label-name">Сезонное</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Капуста жаренная с грибами</p>
+                              <p class="product__text">Капуста белокочанная, шампиньоны, кинза, чеснок, соль, специи,
+                                 растительное масло. </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">140 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img6.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Печеные овощи с соусом песто</p>
+                              <p class="product__text">Кабачок, баклажан, помидор, лук репчатый, чеснок, растительное
+                                 масло, соус песто </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">250 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img7.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Шампиньоны маринованные</p>
+                              <p class="product__text">Шампиньоны ,лук репчатый, душистое масло, зелень, чеснок</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">238 ₽</p>
+                                 <p class="product__gram">238г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img8.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--novelties">
+                                 <p class="product__label-name">Новинка</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Кускус с вялеными томатами</p>
+                              <p class="product__text">Кускус, вяленые томаты, чеснок, петрушка, соль, специи,
+                                 растительное
+                                 масло.</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">135 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="products__cold-snacks-title">Холодные закуски</div>
+                  <div id="cold-snacks" class="products__cold-snacks">
+                     <div class="products__list">
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img8.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-grey">
+                                 <p class="product__label-name">Сезонное</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Кускус с вялеными томатами</p>
+                              <p class="product__text">Кускус, вяленые томаты, чеснок, петрушка, соль, специи,
+                                 растительное
+                                 масло.</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">135 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img8.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-grey">
+                                 <p class="product__label-name">Сезонное</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Капуста жаренная с грибами</p>
+                              <p class="product__text">Капуста белокочанная, шампиньоны, кинза, чеснок, соль, специи,
+                                 растительное масло. </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">140 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img6.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-orange">
+                                 <p class="product__label-name">-20%</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Печеные овощи с соусом песто</p>
+                              <p class="product__text">Кабачок, баклажан, помидор, лук репчатый, чеснок, растительное
+                                 масло, соус песто </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">250 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img7.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-orange">
+                                 <p class="product__label-name">-35%</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Шампиньоны маринованные</p>
+                              <p class="product__text">Шампиньоны ,лук репчатый, душистое масло, зелень, чеснок</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">238 ₽</p>
+                                 <p class="product__gram">238г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="products__list">
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img5.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--background-grey">
+                                 <p class="product__label-name">Сезонное</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Капуста жаренная с грибами</p>
+                              <p class="product__text">Капуста белокочанная, шампиньоны, кинза, чеснок, соль, специи,
+                                 растительное масло. </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">140 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img6.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Печеные овощи с соусом песто</p>
+                              <p class="product__text">Кабачок, баклажан, помидор, лук репчатый, чеснок, растительное
+                                 масло, соус песто </p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">250 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img7.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Шампиньоны маринованные</p>
+                              <p class="product__text">Шампиньоны ,лук репчатый, душистое масло, зелень, чеснок</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">238 ₽</p>
+                                 <p class="product__gram">238г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product">
+                           <div class="product__img-w">
+                              <img src="images/popular-img8.png" alt="product__img" class="product__img">
+                              <svg class="product__bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.5 5H6.5H6V20.5L12 17L17.5 20V5Z" fill="white" />
+                                 <path
+                                    d="M6.08999 21.06C5.82477 21.06 5.57042 20.9546 5.38288 20.7671C5.19534 20.5796 5.08999 20.3252 5.08999 20.06L4.93999 5.4C4.92795 5.10234 4.97487 4.80525 5.07806 4.52579C5.18125 4.24633 5.33868 3.99004 5.54127 3.77164C5.74387 3.55324 5.98765 3.37705 6.25859 3.25321C6.52952 3.12936 6.82227 3.0603 7.11999 3.05L16.71 3C17.0081 3.00521 17.3023 3.06909 17.5757 3.18801C17.8491 3.30692 18.0964 3.47854 18.3035 3.69305C18.5106 3.90756 18.6734 4.16077 18.7826 4.43821C18.8918 4.71565 18.9453 5.01189 18.94 5.31L19.08 19.97C19.0817 20.1452 19.0373 20.3178 18.9513 20.4705C18.8653 20.6232 18.7407 20.7506 18.59 20.84C18.438 20.9278 18.2655 20.974 18.09 20.974C17.9145 20.974 17.742 20.9278 17.59 20.84L11.89 17.68L6.59999 20.91C6.44334 20.9975 6.26906 21.0488 6.08999 21.06ZM11.85 15.51C12.0238 15.5103 12.195 15.5514 12.35 15.63L17.06 18.24L16.94 5.29C16.94 5.09 16.81 4.95 16.73 4.96L7.12999 5.05C7.04999 5.05 6.93999 5.18 6.93999 5.38L7.05999 18.28L11.34 15.65C11.4954 15.561 11.6709 15.5128 11.85 15.51Z"
+                                    fill="#D9D9D9" />
+                              </svg>
+                              <div class="product__label product__label--novelties">
+                                 <p class="product__label-name">Новинка</p>
+                              </div>
+                           </div>
+                           <div class="product__description">
+                              <p class="product__title">Кускус с вялеными томатами</p>
+                              <p class="product__text">Кускус, вяленые томаты, чеснок, петрушка, соль, специи,
+                                 растительное
+                                 масло.</p>
+                           </div>
+                           <div class="product__items-bottom">
+                              <div class="product__price-w">
+                                 <p class="product__price">135 ₽</p>
+                                 <p class="product__gram">200г</p>
+                              </div>
+                              <a href="#" class="product__button">
+                                 <svg class="product__button-icon" width="21" height="20" viewBox="0 0 21 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1774_2005)">
+                                       <path
+                                          d="M18.834 7.49977H14.8423L11.1923 2.03311C11.034 1.79977 10.7673 1.68311 10.5007 1.68311C10.234 1.68311 9.96732 1.79977 9.80898 2.04144L6.15898 7.49977H2.16732C1.70898 7.49977 1.33398 7.87477 1.33398 8.33311C1.33398 8.40811 1.34232 8.48311 1.36732 8.55811L3.48398 16.2831C3.67565 16.9831 4.31732 17.4998 5.08398 17.4998H15.9173C16.684 17.4998 17.3257 16.9831 17.5257 16.2831L19.6423 8.55811L19.6673 8.33311C19.6673 7.87477 19.2923 7.49977 18.834 7.49977ZM10.5007 3.99977L12.834 7.49977H8.16732L10.5007 3.99977ZM15.9173 15.8331L5.09232 15.8414L3.25898 9.16644H17.7507L15.9173 15.8331Z"
+                                          fill="white" />
+                                    </g>
+                                    <defs>
+                                       <clipPath id="clip0_1774_2005">
+                                          <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="product__button-name">В корзину</span>
+                              </a>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>

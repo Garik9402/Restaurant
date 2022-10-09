@@ -10,7 +10,10 @@
 
    @include mq(lg) {}
 
-   @include mq(sm) {}
+   @include mq(sm) {
+      min-width: 15px;
+      height: 12px;
+   }
 
    &::before,
    &::after {
@@ -113,7 +116,6 @@
    }
 
    &__items-right {
-      max-width: 574px;
       width: 100%;
       display: flex;
       justify-content: flex-end;
@@ -124,9 +126,7 @@
 
       }
 
-      @include mq (lg) {
-         width: 100%;
-      }
+      @include mq (lg) {}
 
    }
 
@@ -139,19 +139,20 @@
          padding: 0px 20.5px 0px 15.5px;
       }
 
-      @include mq (lg) {
+      @include mq (md) {
          display: none;
       }
    }
 
    &__address-text {
-
-      @include mq(xxl) {
-         margin-right: 60px;
-      }
+      margin: 0px 72px 0px 10px;
 
       @include mq(xxl) {
          margin-right: 72px;
+      }
+
+      @include mq(lg) {
+         margin-right: calc(30px + (72 - 30) * ((100vw - 568px) /(768 - 568)));
       }
 
 
@@ -173,12 +174,11 @@
       @include mq (lg) {
          max-width: 400px;
          width: 100%;
-         margin-right: 37px;
+         margin-right: 0px;
       }
 
       @include mq (md) {
          max-width: 150px;
-         margin-right: 0px;
       }
 
 
@@ -191,8 +191,6 @@
       align-items: center;
 
    }
-
-
 
    @include mq (lg) {
       display: block;
@@ -207,7 +205,7 @@
       display: flex;
       align-items: center;
 
-      @include mq (md) {
+      @include mq (lg) {
          display: none;
       }
    }
@@ -223,9 +221,7 @@
 }
 
 .address {
-
    height: 45px;
-
    text-decoration: none;
 
    &__text {
@@ -235,16 +231,18 @@
       font-size: 14px;
       line-height: 120%;
       color: #928F87;
-      margin: 0px 72px 0px 10px;
+
    }
 }
 
-.logo-link {
+.logo-link {}
 
-   @include mq(xxl) {}
+.logo {
+   @include mq(sm) {
+      width: 92px;
+      height: 20px;
+   }
 }
-
-.logo {}
 
 .list {
    width: 100%;
@@ -252,24 +250,56 @@
    justify-content: space-between;
    align-items: center;
 
+   @include mq (lg) {
+      width: 100%;
+      justify-content: end;
+   }
 
 
    &__item {
       list-style: none;
 
+      @include mq (lg) {
+         margin-right: 10px;
+      }
+
       &:last-child {
          display: none;
 
-         @include mq(md) {
+         @include mq(lg) {
             display: block;
          }
 
       }
 
+      &:nth-child(3) {
+         @include mq (sm) {
+            display: none;
+         }
+      }
+
+      @include mq (md) {
+         margin: 0px 10px;
+      }
+
+      @include mq (sm) {
+         width: 16px;
+         height: 16px;
+      }
    }
 
    &__item-icon path {
       fill: #000000;
+
+
+   }
+
+   &__item-icon {
+      @include mq(sm) {
+         width: 16px;
+         height: 16px;
+      }
+
    }
 
    &__item-link {
@@ -455,6 +485,11 @@
 .shares {
    width: 100%;
    padding-top: 106px;
+   padding-bottom: 17px;
+
+   @include mq (md) {
+      padding-top: 80px;
+   }
 
    &__inner {
       max-width: 1224px;
@@ -466,22 +501,33 @@
    &__address-w {
       width: 100%;
       display: flex;
-      justify-content: center;
    }
 
    &__address {
       display: none;
       padding: 10px 16px 10px 12px;
+      margin-bottom: 12px;
 
+
+      @include mq (md) {
+         display: flex;
+         align-items: center;
+      }
 
       @include mq (sm) {
+         padding: 10px 13.5;
          display: flex;
          align-items: center;
       }
    }
 
    &__address-text {
-      margin-right: 96px;
+      font-size: 14px;
+      margin: 0px 96px 0px 9px;
+
+      @include mq (sm) {
+         margin: 0px 70px 0px 9px;
+      }
    }
 
    &__menu {
@@ -512,14 +558,6 @@
       @include mq(xl) {
          font-size: calc(18px + (32 - 18) *((100vw - 568px) /(1024 - 568)));
       }
-
-      // @include mq(lg) {
-      //    font-size: 20px;
-      // }
-
-      // @include mq(md) {
-      //    font-size: 16px;
-      // }
 
       &:hover {
          color: #FD6342;
@@ -576,11 +614,6 @@
             max-height: 25px;
             top: 52%;
             border-radius: 24px;
-         }
-
-         @include mq(md) {
-            // max-width: 18px;
-            // max-height: 18px;
          }
 
       }
@@ -663,7 +696,7 @@
    }
 
    @include mq (sm) {
-      max-width: calc(96px + (96 - 96) *((100vw - 375px) /(576 - 375)));
+      max-width: calc(92px + (96 - 92) *((100vw - 320px) /(375 - 320)));
       width: 100%;
       height: calc(122px + (122 - 122) *((100vw - 375px) /(576 - 375)));
       border-radius: 16px;
@@ -753,16 +786,26 @@
       margin-bottom: 24px;
    }
 
-   &__menu {
+   &__checkbox {
+      max-width: 1224px;
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+   }
+
+   &__nav {
+      width: 100%;
    }
 
    &__nav-list {
       display: flex;
-      max-width: 1120px;
       width: 100%;
+
+      @include mq (xl) {
+         justify-content: space-between;
+      }
    }
 
    &__list-item {
@@ -770,18 +813,60 @@
       background: #FBFBFB;
       border-radius: 24px;
 
+      &--js-active {
+         background-color: #EEEEEE;
+      }
+
       &:not(:last-child) {
          margin-right: 12px;
+
+         @include mq (xl) {
+            margin-right: 0px;
+         }
       }
+
+      &:last-child {
+         @include mq (xxl) {
+            display: none;
+         }
+      }
+
+      &:nth-child(5) {
+         @include mq (xl) {
+            display: none;
+         }
+      }
+
+      &:nth-child(4) {
+         @include mq (lg) {
+            display: none;
+         }
+      }
+
+      &:nth-child(3) {
+         @include mq (md) {
+            display: none;
+         }
+      }
+
+      @include mq (xl) {
+         padding: 10px;
+      }
+
+
    }
 
    &__list-item-link {
       display: flex;
-      align-items: center;
-
+      align-items: flex-start;
    }
 
-   &__list-item-img {}
+   &__list-item-img {
+      @include mq (md) {
+         width: 16px;
+         height: 16px;
+      }
+   }
 
    &__list-item-name {
       font-family: 'Manrope', sans-serif;
@@ -790,6 +875,10 @@
       line-height: 150%;
       color: #2E1B0E;
       margin-left: 8px;
+
+      @include mq (md) {
+         font-size: calc(12px + (16 - 12) *((100vw - 375px) /(576 - 375)));
+      }
    }
 
    &__dropdown-item {
@@ -810,6 +899,17 @@
       text-decoration: none;
       position: relative;
       cursor: pointer;
+
+      @include mq (md) {
+         padding: 10px;
+         font-size: 14px;
+         width: 80px;
+         height: 30px;
+      }
+
+      @include mq (sm) {
+         display: none;
+      }
    }
 
 
@@ -821,13 +921,15 @@
       min-height: 0;
       overflow: hidden;
       opacity: 0;
-      top: 10px;
-      left: -130px;
+      top: 40px;
+      left: -119px;
    }
 
    &__droppdown-nav-list-menu {
       width: 100%;
       width: 214px;
+      height: 0;
+
    }
 
    &__droppdown-list-item {
@@ -835,6 +937,7 @@
       width: 100%;
       margin-bottom: 6px;
       padding: 10px;
+
 
       &:hover {
          background-color: #928F87;
@@ -852,4 +955,210 @@
    &__list-item-img {}
 
    &__list-item-name {}
+
+
+   &__menu {
+      width: 100%;
+   }
+
+   &__popular-title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: #2E1B0E;
+      margin-bottom: 24px;
+   }
+
+   &__cold-snacks-title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      color: #2E1B0E;
+      margin-bottom: 24px;
+   }
+
+   &__popular {
+      margin-bottom: 60px;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+         margin-bottom: 32px;
+      }
+   }
+}
+
+
+.salads {
+   display: none;
+
+   @include mq(md) {
+      display: block;
+   }
+}
+
+.first-meal {
+   display: none;
+
+   @include mq(lg) {
+      display: block;
+   }
+}
+
+.side-dishes {
+   display: none;
+
+   @include mq(xl) {
+      display: block;
+   }
+}
+
+.main-courses {
+   display: none;
+
+   @include mq(xxl) {
+      display: block;
+   }
+}
+
+
+
+.product {
+   max-width: 286px;
+   width: 100%;
+   display: flex;
+   min-height: 430px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+
+   &__img-w {
+      position: relative;
+      max-width: 286px;
+      width: 100%;
+      height: 250px;
+
+   }
+
+   &__img {
+      width: 100%;
+      background-size: cover;
+      min-height: 250px;
+      border-radius: 16px 16px 0px 0px;
+   }
+
+   &__bookmark {
+      left: 16px;
+      top: 16px;
+      position: absolute;
+   }
+
+   &__label {
+      position: absolute;
+      padding: 5px 8px;
+      border-radius: 12px;
+      bottom: 16px;
+      left: 16px;
+
+      &--background-grey {
+         background: #576987;
+      }
+
+      &--background-orange {
+         background: #E0A110;
+      }
+
+      &--novelties {
+         background: #971B40;
+      }
+   }
+
+   &__label-name {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: #FFFFFF;
+   }
+
+   &__description {
+      max-width: 262px;
+      width: 100%;
+   }
+
+   &__title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: #2E1B0E;
+      margin-bottom: 8px;
+
+   }
+
+   &__text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 150%;
+      color: #928F87;
+      height: 60px;
+   }
+
+   &__items-bottom {
+      max-width: 262px;
+      width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__price-w {
+      display: flex;
+      align-items: flex-end;
+   }
+
+   &__price {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: #2E1B0E;
+   }
+
+   &__gram {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 150%;
+      color: #928F87;
+      margin-left: 4px;
+   }
+
+   &__button {
+      padding: 12px 18px;
+      background: #FD6342;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+   }
+
+   &__button-icon {
+      margin-right: 12px;
+   }
+
+   &__button-name {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: #FFFFFF;
+   }
 }

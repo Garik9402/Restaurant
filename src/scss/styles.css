@@ -51,6 +51,12 @@
   height: 19px;
   cursor: pointer;
 }
+@media only screen and (max-width: 373px) {
+  .burger {
+    min-width: 15px;
+    height: 12px;
+  }
+}
 .burger::before, .burger::after {
   content: "";
   position: absolute;
@@ -141,7 +147,6 @@
   }
 }
 .header__items-right {
-  max-width: 574px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -149,11 +154,6 @@
 @media only screen and (max-width: 1022px) {
   .header__items-right {
     max-width: 270px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 766px) {
-  .header__items-right {
     width: 100%;
   }
 }
@@ -167,19 +167,22 @@
     padding: 0px 20.5px 0px 15.5px;
   }
 }
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 574px) {
   .header__address {
     display: none;
   }
 }
-@media only screen and (max-width: 1278px) {
-  .header__address-text {
-    margin-right: 60px;
-  }
+.header__address-text {
+  margin: 0px 72px 0px 10px;
 }
 @media only screen and (max-width: 1278px) {
   .header__address-text {
     margin-right: 72px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .header__address-text {
+    margin-right: calc(30px + 42 * (100vw - 568px) / 200);
   }
 }
 .header__menu {
@@ -199,13 +202,12 @@
   .header__menu {
     max-width: 400px;
     width: 100%;
-    margin-right: 37px;
+    margin-right: 0px;
   }
 }
 @media only screen and (max-width: 574px) {
   .header__menu {
     max-width: 150px;
-    margin-right: 0px;
   }
 }
 .header__list-item-link {
@@ -226,7 +228,7 @@
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 574px) {
+@media only screen and (max-width: 766px) {
   .header__basket {
     display: none;
   }
@@ -251,7 +253,13 @@
   font-size: 14px;
   line-height: 120%;
   color: #928F87;
-  margin: 0px 72px 0px 10px;
+}
+
+@media only screen and (max-width: 373px) {
+  .logo {
+    width: 92px;
+    height: 20px;
+  }
 }
 
 .list {
@@ -260,19 +268,52 @@
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 766px) {
+  .list {
+    width: 100%;
+    justify-content: end;
+  }
+}
 .list__item {
   list-style: none;
+}
+@media only screen and (max-width: 766px) {
+  .list__item {
+    margin-right: 10px;
+  }
 }
 .list__item:last-child {
   display: none;
 }
-@media only screen and (max-width: 574px) {
+@media only screen and (max-width: 766px) {
   .list__item:last-child {
     display: block;
   }
 }
+@media only screen and (max-width: 373px) {
+  .list__item:nth-child(3) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 574px) {
+  .list__item {
+    margin: 0px 10px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .list__item {
+    width: 16px;
+    height: 16px;
+  }
+}
 .list__item-icon path {
   fill: #000000;
+}
+@media only screen and (max-width: 373px) {
+  .list__item-icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 .list__item-link {
   text-decoration: none;
@@ -423,6 +464,12 @@
 .shares {
   width: 100%;
   padding-top: 106px;
+  padding-bottom: 17px;
+}
+@media only screen and (max-width: 574px) {
+  .shares {
+    padding-top: 80px;
+  }
 }
 .shares__inner {
   max-width: 1224px;
@@ -433,20 +480,33 @@
 .shares__address-w {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 .shares__address {
   display: none;
   padding: 10px 16px 10px 12px;
+  margin-bottom: 12px;
 }
-@media only screen and (max-width: 373px) {
+@media only screen and (max-width: 574px) {
   .shares__address {
     display: flex;
     align-items: center;
   }
 }
+@media only screen and (max-width: 373px) {
+  .shares__address {
+    padding: 10px 13.5;
+    display: flex;
+    align-items: center;
+  }
+}
 .shares__address-text {
-  margin-right: 96px;
+  font-size: 14px;
+  margin: 0px 96px 0px 9px;
+}
+@media only screen and (max-width: 373px) {
+  .shares__address-text {
+    margin: 0px 70px 0px 9px;
+  }
 }
 .shares__menu {
   margin-bottom: 16px;
@@ -589,7 +649,7 @@
 }
 @media only screen and (max-width: 373px) {
   .card {
-    max-width: calc(96px + 0 * (100vw - 375px) / 201);
+    max-width: calc(92px + 4 * (100vw - 320px) / 55);
     width: 100%;
     height: calc(122px + 0 * (100vw - 375px) / 201);
     border-radius: 16px;
@@ -663,27 +723,76 @@
   color: #2E1B0E;
   margin-bottom: 24px;
 }
-.products__menu {
+.products__checkbox {
+  max-width: 1224px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.products__nav {
+  width: 100%;
 }
 .products__nav-list {
   display: flex;
-  max-width: 1120px;
   width: 100%;
+}
+@media only screen and (max-width: 1022px) {
+  .products__nav-list {
+    justify-content: space-between;
+  }
 }
 .products__list-item {
   padding: 10px 20px;
   background: #FBFBFB;
   border-radius: 24px;
 }
+.products__list-item--js-active {
+  background-color: #EEEEEE;
+}
 .products__list-item:not(:last-child) {
   margin-right: 12px;
 }
+@media only screen and (max-width: 1022px) {
+  .products__list-item:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 1278px) {
+  .products__list-item:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1022px) {
+  .products__list-item:nth-child(5) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .products__list-item:nth-child(4) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 574px) {
+  .products__list-item:nth-child(3) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1022px) {
+  .products__list-item {
+    padding: 10px;
+  }
+}
 .products__list-item-link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 574px) {
+  .products__list-item-img {
+    width: 16px;
+    height: 16px;
+  }
 }
 .products__list-item-name {
   font-family: "Manrope", sans-serif;
@@ -692,6 +801,11 @@
   line-height: 150%;
   color: #2E1B0E;
   margin-left: 8px;
+}
+@media only screen and (max-width: 574px) {
+  .products__list-item-name {
+    font-size: calc(12px + 4 * (100vw - 375px) / 201);
+  }
 }
 .products__dropdown-item {
   width: 96px;
@@ -712,6 +826,19 @@
   position: relative;
   cursor: pointer;
 }
+@media only screen and (max-width: 574px) {
+  .products__dropdown-item {
+    padding: 10px;
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .products__dropdown-item {
+    display: none;
+  }
+}
 .products__droppdown-item-menu {
   position: absolute;
   width: 214px;
@@ -720,12 +847,13 @@
   min-height: 0;
   overflow: hidden;
   opacity: 0;
-  top: 10px;
-  left: -130px;
+  top: 40px;
+  left: -119px;
 }
 .products__droppdown-nav-list-menu {
   width: 100%;
   width: 214px;
+  height: 0;
 }
 .products__droppdown-list-item {
   max-width: 214px;
@@ -741,4 +869,183 @@
   display: inline-block;
   width: 100%;
   display: flex;
+}
+.products__menu {
+  width: 100%;
+}
+.products__popular-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #2E1B0E;
+  margin-bottom: 24px;
+}
+.products__cold-snacks-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #2E1B0E;
+  margin-bottom: 24px;
+}
+.products__popular {
+  margin-bottom: 60px;
+}
+.products__list {
+  display: flex;
+  justify-content: space-between;
+}
+.products__list:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.salads {
+  display: none;
+}
+@media only screen and (max-width: 574px) {
+  .salads {
+    display: block;
+  }
+}
+
+.first-meal {
+  display: none;
+}
+@media only screen and (max-width: 766px) {
+  .first-meal {
+    display: block;
+  }
+}
+
+.side-dishes {
+  display: none;
+}
+@media only screen and (max-width: 1022px) {
+  .side-dishes {
+    display: block;
+  }
+}
+
+.main-courses {
+  display: none;
+}
+@media only screen and (max-width: 1278px) {
+  .main-courses {
+    display: block;
+  }
+}
+
+.product {
+  max-width: 286px;
+  width: 100%;
+  display: flex;
+  min-height: 430px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.product__img-w {
+  position: relative;
+  max-width: 286px;
+  width: 100%;
+  height: 250px;
+}
+.product__img {
+  width: 100%;
+  background-size: cover;
+  min-height: 250px;
+  border-radius: 16px 16px 0px 0px;
+}
+.product__bookmark {
+  left: 16px;
+  top: 16px;
+  position: absolute;
+}
+.product__label {
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 12px;
+  bottom: 16px;
+  left: 16px;
+}
+.product__label--background-grey {
+  background: #576987;
+}
+.product__label--background-orange {
+  background: #E0A110;
+}
+.product__label--novelties {
+  background: #971B40;
+}
+.product__label-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+.product__description {
+  max-width: 262px;
+  width: 100%;
+}
+.product__title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
+  margin-bottom: 8px;
+}
+.product__text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #928F87;
+  height: 60px;
+}
+.product__items-bottom {
+  max-width: 262px;
+  width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product__price-w {
+  display: flex;
+  align-items: flex-end;
+}
+.product__price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #2E1B0E;
+}
+.product__gram {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #928F87;
+  margin-left: 4px;
+}
+.product__button {
+  padding: 12px 18px;
+  background: #FD6342;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.product__button-icon {
+  margin-right: 12px;
+}
+.product__button-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
 }/*# sourceMappingURL=styles.css.map */
