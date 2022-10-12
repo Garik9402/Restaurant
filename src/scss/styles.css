@@ -892,12 +892,40 @@
 .products__popular {
   margin-bottom: 60px;
 }
+@media only screen and (max-width: 766px) {
+  .products__popular {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .products__popular {
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .products__cold-snacks {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .products__list {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 766px) {
+  .products__list {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
 .products__list:not(:last-child) {
   margin-bottom: 32px;
+}
+@media only screen and (max-width: 766px) {
+  .products__list:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 .salads {
@@ -940,21 +968,54 @@
   max-width: 286px;
   width: 100%;
   display: flex;
-  min-height: 430px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+}
+@media only screen and (max-width: 1278px) {
+  .product {
+    max-width: calc(265px + 21 * (100vw - 1280px) / 256);
+    height: calc(415px + 15 * (100vw - 1280px) / 476);
+  }
+}
+@media only screen and (max-width: 1022px) {
+  .product {
+    max-width: calc(160px + 60 * (100vw - 768px) / 256);
+    height: calc(370px + 40 * (100vw - 768px) / 256);
+  }
+}
+@media only screen and (max-width: 766px) {
+  .product {
+    max-width: calc(160px + 180 * (100vw - 375px) / 393);
+    height: calc(260px + 110 * (100vw - 375px) / 393);
+    margin-bottom: 18px;
+  }
 }
 .product__img-w {
   position: relative;
   max-width: 286px;
-  width: 100%;
   height: 250px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 1278px) {
+  .product__img-w {
+    height: calc(180px + 70 * (100vw - 768px) / 512);
+  }
+}
+@media only screen and (max-width: 766px) {
+  .product__img-w {
+    height: 230px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .product__img-w {
+    height: 124px;
+  }
 }
 .product__img {
   width: 100%;
   background-size: cover;
-  min-height: 250px;
+  height: 100%;
   border-radius: 16px 16px 0px 0px;
 }
 .product__bookmark {
@@ -962,12 +1023,35 @@
   top: 16px;
   position: absolute;
 }
+@media only screen and (max-width: 1022px) {
+  .product__bookmark {
+    top: 12px;
+    left: 12px;
+  }
+}
 .product__label {
   position: absolute;
   padding: 5px 8px;
   border-radius: 12px;
   bottom: 16px;
   left: 16px;
+}
+@media only screen and (max-width: 1022px) {
+  .product__label {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .product__label {
+    bottom: 8px;
+    left: 8px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .product__label {
+    padding: 4px 6px;
+  }
 }
 .product__label--background-grey {
   background: #576987;
@@ -985,17 +1069,53 @@
   line-height: 120%;
   color: #FFFFFF;
 }
+@media only screen and (max-width: 766px) {
+  .product__label-name {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 574px) {
+  .product__label-name {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 574px) {
+  .product__label-name {
+    font-size: 8px;
+  }
+}
 .product__description {
-  max-width: 262px;
   width: 100%;
+  max-width: 262px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 766px) {
+  .product__description {
+    max-width: 240px;
+    margin: 0;
+    width: 100%;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .product__description {
+    max-width: 130px;
+    width: 100%;
+  }
 }
 .product__title {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
-  font-size: 16px;
   line-height: 150%;
+  font-size: 16px;
   color: #2E1B0E;
   margin-bottom: 8px;
+}
+@media only screen and (max-width: 574px) {
+  .product__title {
+    font-size: 14px;
+    line-height: 120%;
+  }
 }
 .product__text {
   font-family: "Manrope", sans-serif;
@@ -1005,6 +1125,16 @@
   color: #928F87;
   height: 60px;
 }
+@media only screen and (max-width: 1022px) {
+  .product__text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .product__text {
+    display: none;
+  }
+}
 .product__items-bottom {
   max-width: 262px;
   width: 100%;
@@ -1012,9 +1142,21 @@
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 373px) {
+  .product__items-bottom {
+    max-width: 130px;
+    width: 100%;
+  }
+}
 .product__price-w {
   display: flex;
   align-items: flex-end;
+}
+@media only screen and (max-width: 1022px) {
+  .product__price-w {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 .product__price {
   font-family: "Manrope", sans-serif;
@@ -1022,6 +1164,11 @@
   font-size: 20px;
   line-height: 120%;
   color: #2E1B0E;
+}
+@media only screen and (max-width: 373px) {
+  .product__price--color-orange {
+    color: #FD6342;
+  }
 }
 .product__gram {
   font-family: "Manrope", sans-serif;
@@ -1031,6 +1178,11 @@
   color: #928F87;
   margin-left: 4px;
 }
+@media only screen and (max-width: 1022px) {
+  .product__gram {
+    margin: 0;
+  }
+}
 .product__button {
   padding: 12px 18px;
   background: #FD6342;
@@ -1039,8 +1191,23 @@
   align-items: center;
   text-decoration: none;
 }
+@media only screen and (max-width: 766px) {
+  .product__button {
+    padding: 11px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .product__button {
+    padding: 10px;
+  }
+}
 .product__button-icon {
   margin-right: 12px;
+}
+@media only screen and (max-width: 1022px) {
+  .product__button-icon {
+    margin: 0;
+  }
 }
 .product__button-name {
   font-family: "Manrope", sans-serif;
@@ -1048,4 +1215,9 @@
   font-size: 16px;
   line-height: 120%;
   color: #FFFFFF;
+}
+@media only screen and (max-width: 1022px) {
+  .product__button-name {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

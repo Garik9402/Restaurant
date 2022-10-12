@@ -1,5 +1,6 @@
 @import "fonts.scss";
 @import "mixin.scss";
+@import "variables.scss";
 @import "reset.scss";
 
 .burger {
@@ -981,15 +982,42 @@
 
    &__popular {
       margin-bottom: 60px;
+
+      @include mq(lg) {
+         display: flex;
+         justify-content: space-around;
+      }
+
+      @include mq(sm) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__cold-snacks {
+      @include mq(lg) {
+         display: flex;
+         justify-content: space-around;
+      }
    }
 
    &__list {
       display: flex;
       justify-content: space-between;
 
+      @include mq(lg) {
+         flex-direction: column;
+         justify-content: start;
+      }
+
       &:not(:last-child) {
          margin-bottom: 32px;
+
+         @include mq(lg) {
+            margin-bottom: 0px;
+         }
       }
+
+
    }
 }
 
@@ -1032,23 +1060,49 @@
    max-width: 286px;
    width: 100%;
    display: flex;
-   min-height: 430px;
    flex-direction: column;
    align-items: center;
-   justify-content: space-between;
+
+   @include mq (xxl) {
+      max-width: calc(265px + (286 - 265) *((100vw - 1280px) /(1280 - 1024)));
+      height: calc(415px + (430 - 415) *((100vw - 1280px) /(1500 - 1024)));
+   }
+
+   @include mq (xl) {
+      max-width: calc(160px + (220 - 160) *((100vw - 768px) /(1024 - 768)));
+      height: calc(370px + (410 - 370) *((100vw - 768px) /(1024 - 768)));
+   }
+
+   @include mq (lg) {
+      max-width: calc(160px + (300 - 120) * ((100vw - 375px) / (768 - 375)));
+      height: calc(260px + (370 - 260) *((100vw - 375px) /(768 - 375)));
+      margin-bottom: 18px;
+   }
 
    &__img-w {
       position: relative;
       max-width: 286px;
-      width: 100%;
       height: 250px;
+      width: 100%;
+      margin-bottom: 12px;
 
+      @include mq (xxl) {
+         height: calc(180px + (250 - 180) *((100vw - 768px) / (1280 - 768)))
+      }
+
+      @include mq (lg) {
+         height: 230px;
+      }
+
+      @include mq (sm) {
+         height: 124px;
+      }
    }
 
    &__img {
       width: 100%;
       background-size: cover;
-      min-height: 250px;
+      height: 100%;
       border-radius: 16px 16px 0px 0px;
    }
 
@@ -1056,6 +1110,11 @@
       left: 16px;
       top: 16px;
       position: absolute;
+
+      @include mq (xl) {
+         top: 12px;
+         left: 12px;
+      }
    }
 
    &__label {
@@ -1064,6 +1123,23 @@
       border-radius: 12px;
       bottom: 16px;
       left: 16px;
+
+      @include mq (xl) {
+         bottom: 10px;
+         left: 10px;
+      }
+
+      @include mq (lg) {
+         bottom: 8px;
+         left: 8px;
+      }
+
+      @include mq (md) {}
+
+      @include mq (sm) {
+         padding: 4px 6px;
+      }
+
 
       &--background-grey {
          background: #576987;
@@ -1084,20 +1160,52 @@
       font-size: 14px;
       line-height: 120%;
       color: #FFFFFF;
+
+      @include mq (lg) {
+         font-size: 12px;
+      }
+
+      @include mq (md) {
+         font-size: 10px;
+      }
+
+      @include mq (md) {
+         font-size: 8px;
+      }
    }
 
    &__description {
-      max-width: 262px;
       width: 100%;
+      max-width: 262px;
+      margin-bottom: 16px;
+
+      @include mq (xxl) {}
+
+      @include mq (lg) {
+         max-width: 240px;
+         margin: 0;
+         width: 100%;
+         height: 60px;
+      }
+
+      @include mq (sm) {
+         max-width: 130px;
+         width: 100%;
+      }
    }
 
    &__title {
       font-family: 'Manrope', sans-serif;
       font-weight: 700;
-      font-size: 16px;
       line-height: 150%;
+      font-size: 16px;
       color: #2E1B0E;
       margin-bottom: 8px;
+
+      @include mq (md) {
+         font-size: 14px;
+         line-height: 120%;
+      }
 
    }
 
@@ -1108,6 +1216,14 @@
       line-height: 150%;
       color: #928F87;
       height: 60px;
+
+      @include mq (xl) {
+         font-size: 12px;
+      }
+
+      @include mq (lg) {
+         display: none;
+      }
    }
 
    &__items-bottom {
@@ -1116,11 +1232,22 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      @include mq (sm) {
+         max-width: 130px;
+         width: 100%;
+      }
+
    }
 
    &__price-w {
       display: flex;
       align-items: flex-end;
+
+      @include mq (xl) {
+         flex-direction: column-reverse;
+         align-items: flex-start;
+      }
    }
 
    &__price {
@@ -1129,6 +1256,12 @@
       font-size: 20px;
       line-height: 120%;
       color: #2E1B0E;
+
+      @include mq (sm) {
+         &--color-orange {
+            color: $colorItems;
+         }
+      }
    }
 
    &__gram {
@@ -1138,6 +1271,10 @@
       line-height: 150%;
       color: #928F87;
       margin-left: 4px;
+
+      @include mq (xl) {
+         margin: 0;
+      }
    }
 
    &__button {
@@ -1148,10 +1285,22 @@
       align-items: center;
       text-decoration: none;
 
+      @include mq (lg) {
+         padding: 11px;
+      }
+
+      @include mq (sm) {
+         padding: 10px;
+      }
+
    }
 
    &__button-icon {
       margin-right: 12px;
+
+      @include mq (xl) {
+         margin: 0;
+      }
    }
 
    &__button-name {
@@ -1160,5 +1309,9 @@
       font-size: 16px;
       line-height: 120%;
       color: #FFFFFF;
+
+      @include mq (xl) {
+         display: none;
+      }
    }
 }
