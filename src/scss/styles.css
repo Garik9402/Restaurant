@@ -901,6 +901,7 @@
 @media only screen and (max-width: 373px) {
   .products__popular {
     margin-bottom: 32px;
+    justify-content: space-between;
   }
 }
 @media only screen and (max-width: 766px) {
@@ -911,7 +912,6 @@
 }
 @media only screen and (max-width: 373px) {
   .products__cold-snacks {
-    display: flex;
     justify-content: space-between;
   }
 }

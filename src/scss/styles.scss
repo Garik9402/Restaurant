@@ -990,6 +990,7 @@
 
       @include mq(sm) {
          margin-bottom: 32px;
+         justify-content: space-between
       }
    }
 
@@ -1000,7 +1001,6 @@
       }
 
       @include mq(sm) {
-         display: flex;
          justify-content: space-between;
       }
    }
