@@ -998,6 +998,11 @@
          display: flex;
          justify-content: space-around;
       }
+
+      @include mq(sm) {
+         display: flex;
+         justify-content: space-between;
+      }
    }
 
    &__list {
@@ -1074,7 +1079,7 @@
    }
 
    @include mq (lg) {
-      max-width: calc(160px + (300 - 120) * ((100vw - 375px) / (768 - 375)));
+      max-width: calc(160px + (300 - 160) * ((100vw - 375px) / (768 - 375)));
       height: calc(260px + (370 - 260) *((100vw - 375px) /(768 - 375)));
       margin-bottom: 18px;
    }
@@ -1091,11 +1096,12 @@
       }
 
       @include mq (lg) {
-         height: 230px;
+         height: 240px;
       }
 
       @include mq (sm) {
          height: 124px;
+         margin-bottom: 4px;
       }
    }
 
@@ -1258,6 +1264,8 @@
       color: #2E1B0E;
 
       @include mq (sm) {
+         font-size: 18px;
+
          &--color-orange {
             color: $colorItems;
          }
@@ -1274,6 +1282,10 @@
 
       @include mq (xl) {
          margin: 0;
+      }
+
+      @include mq (sm) {
+         font-size: 12px;
       }
    }
 
