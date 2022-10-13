@@ -708,6 +708,7 @@
 
 .products {
   width: 100%;
+  padding-bottom: 120px;
 }
 .products__inner {
   max-width: 1224px;
@@ -1235,4 +1236,92 @@
   .product__button-name {
     display: none;
   }
+}
+
+.footer {
+  width: 100%;
+  padding: 32px 0px 18px 0px;
+}
+.footer__inner {
+  max-width: 1225px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.footer__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu {
+  max-width: 207px;
+  width: 100%;
+  height: 254px;
+}
+.footer__menu:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer__menu-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: #2E1B0E;
+  margin-bottom: 16px;
+}
+.footer__menu-nav-list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.footer__menu-item-link {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #928F87;
+}
+.footer__schedule-nav-list:not(:last-child) {
+  margin-bottom: 16px;
+}
+.footer__schedule-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
+  margin-bottom: 8px;
+}
+.footer__schedule-days {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
+}
+.footer__schedule-time {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #928F87;
+}
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyright {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #928F87;
+}
+.footer__developed {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #928F87;
 }/*# sourceMappingURL=styles.css.map */
