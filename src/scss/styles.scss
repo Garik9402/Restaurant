@@ -1333,6 +1333,15 @@
    width: 100%;
    padding: 32px 0px 18px 0px;
 
+   @include mq (md) {
+      position: fixed;
+      background: #FFFFFF;
+      box-shadow: 2px 2px 16px rgba(114, 114, 114, 0.16);
+      bottom: 0;
+      left: 0;
+      padding: 0;
+   }
+
    &__inner {
       max-width: 1225px;
       width: 100%;
@@ -1344,6 +1353,11 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      @include mq (md) {
+         display: none;
+
+      }
    }
 
    &__menu {
@@ -1351,10 +1365,31 @@
       width: 100%;
       height: 254px;
 
+      @include mq (xxl) {
+         margin-right: 12px;
+      }
+
+
+      &:nth-child(2) {
+
+         @include mq (xl) {
+            display: none;
+         }
+      }
+
+      &:nth-child(1) {
+
+         @include mq (lg) {
+            display: none;
+         }
+      }
+
       &:last-child {
          display: flex;
          flex-direction: column;
          align-items: flex-end;
+
+
       }
    }
 
@@ -1418,6 +1453,18 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      @include mq (lg) {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+      }
+
+      @include mq (md) {
+         display: none;
+
+      }
    }
 
    &__copyright {
@@ -1434,5 +1481,61 @@
       font-size: 14px;
       line-height: 150%;
       color: #928F87;
+   }
+
+   &__contact-nav-list-item {
+      text-align: end;
+   }
+
+   &__fixed {
+      width: 100%;
+      display: none;
+
+      @include mq (md) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 8px 0px;
+      }
+   }
+
+   &__fixed-description {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      color: #928F87;
+      margin-bottom: 8px;
+
+      @include mq (sm) {
+         font-size: calc(12px + (18 - 12) *((100vw - 320px) /(375 - 320)));
+      }
+   }
+
+   &__fixed-button {
+      max-width: 450px;
+      width: 100%;
+      display: inline-block;
+      padding: 20px 40px;
+      text-decoration: none;
+      background-color: $colorItems;
+      text-align: center;
+      border-radius: 18px;
+
+
+   }
+
+   &__fixed-button-name {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      color: #FFFFFF;
+
+      @include mq (sm) {
+         font-size: calc(14px + (20 - 14) *((100vw - 320px) /(375 - 320)));
+      }
+
+
    }
 }
