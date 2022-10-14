@@ -81,14 +81,14 @@
   left: 0;
 }
 .burger--js-active::before {
-  transform: rotate(-315deg);
-  top: 48%;
-  transition: all 0.2s linear;
+  transform: rotate(-45deg);
+  top: 45%;
+  background-color: #FD6342;
 }
 .burger--js-active::after {
-  transform: rotate(315deg);
+  transform: rotate(45deg);
   bottom: 45%;
-  transition: all 0.2s linear;
+  background-color: #FD6342;
 }
 @media only screen and (max-width: 373px) {
   .burger--js-active::after {
@@ -104,6 +104,13 @@
   min-height: 100vw;
 }
 
+.content-inner {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
 .header {
   width: 100%;
   height: 80px;
@@ -111,6 +118,8 @@
   background-color: #fff;
   padding: 17.5px 0px;
   z-index: 200;
+  left: 0;
+  top: 0;
 }
 .header__inner {
   max-width: 1224px;
@@ -333,10 +342,32 @@
 }
 
 .burger-menu {
+  position: absolute;
+  max-width: 480px;
+  width: 100%;
+  padding: 0px;
+  background: #FFFFFF;
+  border-radius: 16px;
   height: 0;
   min-height: 0;
   overflow: hidden;
   opacity: 0;
+  left: 10px;
+  top: 92px;
+}
+@media only screen and (max-width: 766px) {
+  .burger-menu {
+    left: 5px;
+  }
+}
+.burger-menu--js-toggle {
+  height: auto;
+  min-height: 20px;
+  overflow: visible;
+  opacity: 1;
+  z-index: 50;
+  padding: 24px;
+  box-shadow: -1px 2px 23px rgba(0, 0, 0, 0.12);
 }
 .burger-menu__inner {
   max-width: 432px;
@@ -460,6 +491,14 @@
 .spoiler__arrow--js-open-list {
   transform: rotate(180deg);
 }
+.spoiler__profile {
+  display: none;
+}
+@media only screen and (max-width: 373px) {
+  .spoiler__profile {
+    display: block;
+  }
+}
 
 .shares {
   width: 100%;
@@ -546,6 +585,7 @@
 .shares__cards-slider {
   width: 100%;
   position: relative;
+  z-index: 20;
   /* Лента слайдов */
   /* Стрелка */
   /* Стрелка влево */

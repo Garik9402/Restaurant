@@ -88,3 +88,10 @@ productsListItemNode.forEach(el => {
 
    })
 })
+// открытие и закрытие бургер меню
+const burgerNode = document.querySelector('.burger')
+const burgerMenuNode = document.querySelector('.burger-menu')
+burgerNode.addEventListener('click', () => {
+   burgerNode.classList.toggle('burger--js-active')
+   burgerMenuNode.classList.toggle('burger-menu--js-toggle')
+})
