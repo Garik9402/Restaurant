@@ -95,3 +95,16 @@ burgerNode.addEventListener('click', () => {
    burgerNode.classList.toggle('burger--js-active')
    burgerMenuNode.classList.toggle('burger-menu--js-toggle')
 })
+//меню выбор адреса
+
+const addressNameNode = document.querySelectorAll('.address-menu__nav-item-link')
+const addresSvgNode = document.querySelectorAll('.address-menu__svg')
+
+addressNameNode.forEach(function (elem) {
+   elem.addEventListener('click', function () {
+      addressNameNode.forEach(function (e) {
+         e.classList.remove('address-menu__nav-item-link--js-color-add')
+      })
+      this.classList.add('address-menu__nav-item-link--js-color-add')
+   })
+})

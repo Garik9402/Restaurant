@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
    <div class="wrapper-content">
       <div class="content-inner">
          <div class="burger-menu">
@@ -158,6 +157,44 @@
                   </div>
                </div>
             </div>
+         </div>
+         <div class="address-menu">
+            <nav class="nav">
+               <ul class="nav__list address-menu__nav-list">
+                  <li class="nav__list-item  address-menu__add-address-item">
+                     <a href="#" class="nav__item-link address-menu__add-address-link">Добавить новый адрес
+                        <svg class="address-menu__add-address-svg" width="20" height="20" viewBox="0 0 20 20"
+                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M9 17C9 17.5523 9.44772 18 10 18C10.5523 18 11 17.5523 11 17V11H17C17.5523 11 18 10.5523 18 10C18 9.44771 17.5523 9 17 9L11 9V3C11 2.44771 10.5523 2 10 2C9.44772 2 9 2.44771 9 3V9L3 9C2.44772 9 2 9.44772 2 10C2 10.5523 2.44772 11 3 11H9V17Z"
+                              fill="#2E1B0E" />
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="nav__list-item address-menu__nav-list-item">
+                     <a href="#" class="nav__item-link address-menu__nav-item-link">Никитинская 42
+                        <svg class="address-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M17.2002 4.35967C17.5537 4.65431 17.6015 5.17978 17.3069 5.53335L8.97352 15.5333C8.82363 15.7132 8.60499 15.8217 8.3711 15.8323C8.1372 15.8429 7.90964 15.7547 7.74408 15.5891L2.74408 10.5891C2.41864 10.2637 2.41864 9.73604 2.74408 9.4106C3.06951 9.08517 3.59715 9.08517 3.92259 9.4106L8.27733 13.7653L16.0265 4.46637C16.3211 4.11281 16.8466 4.06504 17.2002 4.35967Z"
+                              fill="#FD6342" />
+                        </svg>
+
+                     </a>
+                  </li>
+                  <li class="nav__list-item address-menu__nav-list-item">
+                     <a href="#" class="nav__item-link address-menu__nav-item-link">пл. Ленина 12а, д. 42
+                        <svg class="address-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M17.2002 4.35967C17.5537 4.65431 17.6015 5.17978 17.3069 5.53335L8.97352 15.5333C8.82363 15.7132 8.60499 15.8217 8.3711 15.8323C8.1372 15.8429 7.90964 15.7547 7.74408 15.5891L2.74408 10.5891C2.41864 10.2637 2.41864 9.73604 2.74408 9.4106C3.06951 9.08517 3.59715 9.08517 3.92259 9.4106L8.27733 13.7653L16.0265 4.46637C16.3211 4.11281 16.8466 4.06504 17.2002 4.35967Z"
+                              fill="#FD6342" />
+                        </svg>
+
+                     </a>
+                  </li>
+               </ul>
+            </nav>
          </div>
          <header class="header">
             <div class="header__inner">
@@ -1256,7 +1293,25 @@
             </div>
          </footer>
       </div>
+      <div id="location" class="popup-location-w">
+         <div class="popup-location">
+            <div class="popup-location__body">
+               <div class="popup-location__title">Укажите адрес доставки</div>
+               <div class="popup-location__search">
+                  <input type="text" class="popup-location__input">
+                  <a href="#" class="popup-location__button">
+                     <span class="popup-location__button-name">Поиск</span>
+                  </a>
+               </div>
+               <iframe class="popup-location__map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.4587294156547!2d30.384057215988495!3d59.92452998187107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696313bdc689901%3A0x6d2b3a51b74507e7!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1665769799882!5m2!1sru!2sru"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+         </div>
+      </div>
    </div>
+
    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
    <script src="js/slick.min.js"></script>
    <script src="js/script.min.js"></script>
