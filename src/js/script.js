@@ -140,3 +140,24 @@ window.addEventListener('click', function (event) {
       phonesMenuNode.classList.remove('phones--js-open')
    }
 })
+//окрытие и закрытие слайдера с выбором акций или продукта
+const cardItemNode = document.querySelectorAll('.card')
+const sliderCardNode = document.querySelector('.popup-cards')
+const sliderCloseNode = document.querySelectorAll('.popup-card__close')
+
+window.addEventListener('click', function (event) {
+   cardItemNode.forEach(function (e) {
+      if (e.contains(event.target) || sliderCardNode.contains(event.target)) {
+         sliderCardNode.classList.add('popup-cards--js-open')
+      }
+
+   })
+   sliderCloseNode.forEach(function (el) {
+      if (el.contains(event.target)) {
+         sliderCardNode.classList.remove('popup-cards--js-open')
+      }
+   })
+})
+
+
+
