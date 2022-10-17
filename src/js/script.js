@@ -108,3 +108,35 @@ addressNameNode.forEach(function (elem) {
       this.classList.add('address-menu__nav-item-link--js-color-add')
    })
 })
+
+//добавление адреса и закрытие 
+const addressAddNode = document.querySelector('.add-address--js-open')
+const locationSearchNode = document.querySelector('.popup-location-w')
+const closeLocationNode = document.querySelector('.popup-location__close')
+const addressNode = document.querySelector('.address')
+const addressMenuNode = document.querySelector('.address-menu')
+window.addEventListener('click', function (event) {
+   if (addressNode.contains(event.target)) {
+      addressMenuNode.classList.add('address-menu--js-open')
+   }
+
+})
+addressAddNode.addEventListener('click', function () {
+   locationSearchNode.classList.add('popup-location-w--js-open')
+   addressMenuNode.classList.remove('address-menu--js-open')
+})
+closeLocationNode.addEventListener('click', function () {
+   locationSearchNode.classList.remove('popup-location-w--js-open')
+})
+
+// выподающее меню с ноиерами телефонов
+const callNode = document.querySelector('.call')
+const phonesMenuNode = document.querySelector('.phones')
+window.addEventListener('click', function (event) {
+   if (callNode.contains(event.target) || phonesMenuNode.contains(event.target)) {
+      phonesMenuNode.classList.add('phones--js-open')
+   }
+   else {
+      phonesMenuNode.classList.remove('phones--js-open')
+   }
+})
