@@ -166,8 +166,15 @@ const prevCardNode = document.querySelector('.popup-cards__arrow-prev')
 let size = 0;
 nextCardNode.addEventListener('click', function () {
    size += 445
-   if (size > 1200) {
+   if (size > 2225) {
       size = 0;
+   }
+   sliderListNode.style.right = size + 'px'
+})
+prevCardNode.addEventListener('click', function () {
+   size += -445
+   if (size < 0) {
+      size = 2225
    }
    sliderListNode.style.right = size + 'px'
 })
