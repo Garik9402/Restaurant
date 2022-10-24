@@ -2024,3 +2024,117 @@
    }
 
 }
+
+.popup-product {
+   width: 100%;
+   position: absolute;
+   z-index: 300;
+
+   &__inner {
+      max-width: 767px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+   }
+
+   &__img {
+      max-width: 320px;
+      height: 320px;
+   }
+
+
+   &__description {}
+
+   &__desctiption-top {
+      margin-bottom: 18px;
+   }
+
+   &__title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: #2E1B0E;
+      margin-bottom: 8px;
+   }
+
+   &__text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #928F87;
+   }
+
+   &__desctiption-middle {}
+
+   &__add-product-title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: #2E1B0E;
+      margin-bottom: 8px;
+   }
+
+   &__products {
+      display: flex;
+   }
+
+   &__product {
+      max-width: 113px;
+      width: 100%
+   }
+
+   &__product-img {
+      margin-bottom: 6px;
+   }
+
+   &__product-description {}
+
+   &__product-title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 150%;
+      color: #928F87;
+      text-align: center;
+
+   }
+
+   &__product-price {}
+
+   &__desctiption-bottom {}
+
+   &__price-basket {}
+
+   &__price-w {}
+
+   &__price {}
+
+   &__gram {}
+}
+
+.description-product-img {}
+
+.additional-information {
+
+   &__spoiler {}
+
+   &__menu-nav-list {}
+
+   &__menu-nav-list-item {}
+
+   &__description {}
+
+   &__description-grey {}
+}
+
+.product {
+
+   &__button {}
+
+   &__button-icon {}
+
+   &__button-name {}
+}
