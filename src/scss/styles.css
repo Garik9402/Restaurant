@@ -1861,6 +1861,10 @@
   max-width: 320px;
   height: 320px;
 }
+.popup-product__description {
+  max-width: 363px;
+  width: 100%;
+}
 .popup-product__desctiption-top {
   margin-bottom: 18px;
 }
@@ -1889,10 +1893,14 @@
 }
 .popup-product__products {
   display: flex;
+  justify-content: space-between;
 }
 .popup-product__product {
   max-width: 113px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .popup-product__product-img {
   margin-bottom: 6px;
@@ -1904,4 +1912,54 @@
   line-height: 150%;
   color: #928F87;
   text-align: center;
+  margin-bottom: 2px;
+}
+.popup-product__product-price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
+  text-align: center;
+}
+.popup-product__desctiption-bottom {
+  width: 100%;
+}
+.additional-information {
+  width: 100%;
+  background: #F5F5F6;
+  border-radius: 16px;
+  padding: 24px;
+}
+.additional-information__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.additional-information__title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
+}
+.additional-information__menu-nav-list {
+  width: 100%;
+}
+.additional-information__menu-nav-list-item {
+  display: flex;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #2E1B0E;
+  display: flex;
+}
+.additional-information__description-grey {
+  width: 200px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #928F87;
 }/*# sourceMappingURL=styles.css.map */
