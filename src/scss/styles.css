@@ -1849,13 +1849,36 @@
 .popup-product {
   width: 100%;
   position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
   z-index: 300;
+  height: 100%;
 }
 .popup-product__inner {
-  max-width: 767px;
+  position: relative;
+  max-width: 797px;
   width: 100%;
   margin: 0 auto;
   display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  top: 294px;
+}
+.popup-product__content {
+  max-width: 731px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 15px rgba(125, 125, 125, 0.15);
+  border-radius: 24px;
+  display: flex;
+  padding: 16px;
+}
+.popup-product__img-w {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  height: 320px;
 }
 .popup-product__img {
   max-width: 320px;
@@ -1864,9 +1887,42 @@
 .popup-product__description {
   max-width: 363px;
   width: 100%;
+  margin-left: 16px;
 }
 .popup-product__desctiption-top {
   margin-bottom: 18px;
+  position: relative;
+}
+.popup-product__info {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+}
+.popup-product__info--js-toggle .popup-product__info-dropdown {
+  display: block;
+}
+.popup-product__close {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.popup-product__info-dropdown {
+  position: absolute;
+  width: 240px;
+  background: #F5F5F6;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  right: 0;
+  display: none;
+}
+.popup-product__info-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2E1B0E;
 }
 .popup-product__title {
   font-family: "Manrope", sans-serif;
@@ -1894,6 +1950,7 @@
 .popup-product__products {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 18px;
 }
 .popup-product__product {
   position: relative;
@@ -1903,6 +1960,7 @@
   flex-direction: column;
   align-items: center;
   background: #FFFFFF;
+  cursor: pointer;
 }
 .popup-product__product--js-toggle {
   border: 2px solid #FD6342;
@@ -1915,6 +1973,9 @@
 }
 .popup-product__product--js-toggle .popup-product__product-check-mark {
   display: block;
+}
+.popup-product__product--js-toggle .popup-product__product-title {
+  color: #FD6342;
 }
 .popup-product__product-check-mark {
   position: absolute;

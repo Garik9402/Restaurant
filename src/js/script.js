@@ -204,6 +204,17 @@ additionalProduct.forEach(function (e) {
 
    })
 })
+// открытие инфо о продукте
+const dropdownInfo = document.querySelector('.popup-product__info')
+window.addEventListener('click', function (event) {
+   if (dropdownInfo.contains(event.target)) {
+      dropdownInfo.classList.toggle('popup-product__info--js-toggle')
+   }
+   else {
+      dropdownInfo.classList.remove('popup-product__info--js-toggle')
+   }
+})
+
 
 
 
