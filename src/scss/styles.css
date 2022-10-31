@@ -1854,6 +1854,7 @@
   left: 0;
   z-index: 300;
   height: 100%;
+  display: none;
 }
 .popup-product__inner {
   position: relative;
