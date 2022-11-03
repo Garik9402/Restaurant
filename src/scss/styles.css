@@ -1854,6 +1854,10 @@
   left: 0;
   z-index: 300;
   min-height: 100%;
+  display: none;
+}
+.popup-product--js-open {
+  display: block;
 }
 .popup-product__inner {
   position: relative;

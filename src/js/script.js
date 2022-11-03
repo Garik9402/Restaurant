@@ -215,8 +215,18 @@ window.addEventListener('click', function (event) {
    }
 })
 
-
-
+// попап продукты 
+const productNode = document.querySelectorAll('.product')
+const popupProductNode = document.querySelectorAll('.popup-product')
+productNode.forEach(el => {
+   el.addEventListener('click', function () {
+      let index = this.dataset.id
+      popupProductNode.forEach(e => {
+         e.classList.remove('popup-product--js-open')
+      })
+      popupProductNode[index].classList.add('popup-product--js-open')
+   })
+})
 
 
 
