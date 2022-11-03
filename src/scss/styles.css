@@ -1853,8 +1853,7 @@
   top: 0;
   left: 0;
   z-index: 300;
-  height: 100%;
-  display: none;
+  min-height: 100%;
 }
 .popup-product__inner {
   position: relative;
