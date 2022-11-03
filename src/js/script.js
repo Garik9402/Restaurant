@@ -179,9 +179,10 @@ prevCardNode.addEventListener('click', function () {
    sliderListNode.style.right = size + 'px'
 })
 
-//  добавить к заказу продукт
+// Дополнительные продукты к заказу 
 const additionalProduct = document.querySelectorAll('.popup-product__product')
 additionalProduct.forEach(function (e) {
+
    e.addEventListener('mouseover', function () {
       if (e.classList.contains('popup-product__product--js-toggle')) {
          this.classList.remove('popup-product__product--js-img-scale')
@@ -198,11 +199,12 @@ additionalProduct.forEach(function (e) {
    additionalProduct.forEach(function (elem) {
       elem.addEventListener('mousedown', function () {
          this.classList.remove('popup-product__product--js-img-scale')
-         this.classList.toggle('popup-product__product--js-toggle')
+         this.classList.add('popup-product__product--js-toggle')
 
       })
 
    })
+
 })
 // открытие инфо о продукте
 const dropdownInfo = document.querySelectorAll('.popup-product__info')
