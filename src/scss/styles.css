@@ -496,11 +496,11 @@
   overflow: hidden;
   opacity: 0;
 }
+.spoiler--js-open-list .spoiler__arrow {
+  transform: rotate(180deg);
+}
 .spoiler__arrow {
   cursor: pointer;
-}
-.spoiler__arrow--js-open-list {
-  transform: rotate(180deg);
 }
 .spoiler__profile {
   display: none;

@@ -44,29 +44,16 @@ const spoilersNode = document.querySelectorAll('.spoiler')
 const spoilersArrowsNode = document.querySelectorAll('.spoiler__arrow')
 const spoilerList = document.querySelectorAll('.sloiler__list')
 
-window.addEventListener('click', function (event) {
-   if (event.target.dataset.action === 'arrow') {
-      const spoiler = event.target.closest('.spoiler')
+spoilersNode.forEach(elem => {
+   elem.addEventListener('click', function () {
+      spoilersNode.forEach(e => {
+         if (e.classList.contains('.spoiler--js-open-list')) {
+            e.classList.remove('spoiler--js-open-list')
+         }
+         this.classList.add('spoiler--js-open-list')
 
-   }
 
-})
-spoilersArrowsNode.forEach(elem => {
-   elem.addEventListener('click', function (event) {
-      spoilersArrowsNode.forEach(e => {
-         e.classList.remove('spoiler__arrow--js-open-list')
       })
-      spoilersArrowsNode.forEach(element => {
-         if (event.target.dataset.action === 'arrow') {
-            const spoiler = event.target.closest('.spoiler')
-            spoiler.classList.add('spoiler--js-open-list')
-         }
-         if (event.target.dataset.action != 'arrow') {
-            spoiler.classList.remove('spoiler--js-open-list')
-         }
-
-      });
-      this.classList.add('spoiler__arrow--js-open-list')
    })
 })
 

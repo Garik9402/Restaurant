@@ -506,15 +506,12 @@
 
    }
 
+   &--js-open-list &__arrow {
+      transform: rotate(180deg);
+   }
+
    &__arrow {
       cursor: pointer;
-
-      &--js-open-list {
-         transform: rotate(180deg);
-
-
-      }
-
    }
 
    &__list-item-link {}
