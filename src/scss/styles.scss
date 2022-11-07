@@ -247,8 +247,6 @@
    }
 }
 
-.logo-link {}
-
 .logo {
    @include mq(sm) {
       width: 92px;
@@ -715,8 +713,6 @@
    &__nav-item-link--js-add-color {}
 }
 
-
-
 .shares {
    width: 100%;
    padding-top: 106px;
@@ -905,7 +901,6 @@
 
    }
 }
-
 
 .card {
    position: relative;
