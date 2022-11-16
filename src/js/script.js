@@ -203,6 +203,15 @@ dropdownInfo.forEach(el => {
 })
 
 
+//фильтр с выбором тип продукта
+let productsTypeNode = document.querySelector('.products__dropdown-item')
+let productsTypeMenu = document.querySelector('.products__droppdown-item-menu')
+productsTypeNode.addEventListener('click', function () {
+   console.log('1')
+   productsTypeMenu.classList.toggle('products__droppdown-item-menu--js-toggle')
+})
+
+
 // попап открытие и закрытие продукта 
 const productNode = document.querySelectorAll('.product')
 const popupProductNode = document.querySelectorAll('.popup-product')
