@@ -623,6 +623,17 @@
    overflow: hidden;
    opacity: 0;
 
+   @include mq (lg) {
+      right: 80px;
+      max-width: calc(270px + (432 - 270) *((100vw - 320px) /(768 - 320)));
+   }
+
+   @include mq (md) {
+      right: 10px;
+      top: 50px;
+
+   }
+
    &--js-open {
       height: auto;
       min-height: 40px;
@@ -641,6 +652,10 @@
    &__items {
       display: flex;
       justify-content: space-between;
+
+      @include mq (lg) {
+         flex-direction: column;
+      }
 
       &:not(:last-child) {
          margin-bottom: 12px;
@@ -688,6 +703,10 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      @include mq (lg) {
+         flex-direction: column;
+      }
    }
 
    &__nav-list {

@@ -593,6 +593,18 @@
   overflow: hidden;
   opacity: 0;
 }
+@media only screen and (max-width: 766px) {
+  .phones {
+    right: 80px;
+    max-width: calc(270px + 162 * (100vw - 320px) / 448);
+  }
+}
+@media only screen and (max-width: 574px) {
+  .phones {
+    right: 10px;
+    top: 50px;
+  }
+}
 .phones--js-open {
   height: auto;
   min-height: 40px;
@@ -608,6 +620,11 @@
 .phones__items {
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 766px) {
+  .phones__items {
+    flex-direction: column;
+  }
 }
 .phones__items:not(:last-child) {
   margin-bottom: 12px;
@@ -647,6 +664,11 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 766px) {
+  .phones__nav {
+    flex-direction: column;
+  }
 }
 .phones__nav-list {
   width: 164;
