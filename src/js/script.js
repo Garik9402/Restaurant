@@ -96,14 +96,15 @@ addressNameNode.forEach(function (elem) {
 const addressAddNode = document.querySelector('.add-address--js-open')
 const locationSearchNode = document.querySelector('.popup-location-w')
 const closeLocationNode = document.querySelector('.popup-location__close')
-const addressNode = document.querySelector('.address')
+const addressNode = document.querySelectorAll('.address')
 const addressMenuNode = document.querySelector('.address-menu')
-window.addEventListener('click', function (event) {
-   if (addressNode.contains(event.target)) {
-      addressMenuNode.classList.add('address-menu--js-open')
-   }
 
+addressNode.forEach(elem => {
+   elem.addEventListener('click', function () {
+      addressMenuNode.classList.toggle('address-menu--js-open')
+   })
 })
+
 addressAddNode.addEventListener('click', function () {
    locationSearchNode.classList.add('popup-location-w--js-open')
    addressMenuNode.classList.remove('address-menu--js-open')
