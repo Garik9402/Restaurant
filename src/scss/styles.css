@@ -157,6 +157,7 @@
   }
 }
 .header__items-right {
+  max-width: 600px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -207,9 +208,9 @@
   align-items: center;
   margin-right: 32px;
 }
-@media only screen and (max-width: 1022px) {
+@media only screen and (max-width: 1278px) {
   .header__menu {
-    margin-right: 15px;
+    margin-right: calc(20px + 12 * (100vw - 1024px) / 256);
     padding-left: 5px;
     max-width: 100px;
   }
@@ -294,7 +295,7 @@
   list-style: none;
 }
 .list__item {
-  margin-left: 32px;
+  margin-right: calc(15px + 17 * (100vw - 1024px) / 256);
 }
 @media only screen and (max-width: 1022px) {
   .list__item {

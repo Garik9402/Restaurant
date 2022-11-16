@@ -127,6 +127,7 @@
    }
 
    &__items-right {
+      max-width: 600px;
       width: 100%;
       display: flex;
       justify-content: flex-end;
@@ -179,8 +180,8 @@
       align-items: center;
       margin-right: 32px;
 
-      @include mq(xl) {
-         margin-right: 15px;
+      @include mq(xxl) {
+         margin-right: calc(20px + (32 - 20) * ((100vw - 1024px) /(1280 - 1024)));
          padding-left: 5px;
          max-width: 100px;
 
@@ -273,7 +274,8 @@
       list-style: none;
 
       & {
-         margin-left: 32px;
+         margin-right: calc(15px + (32 - 15) * ((100vw - 1024px) /(1280 - 1024)));
+
       }
 
       @include mq (xl) {
